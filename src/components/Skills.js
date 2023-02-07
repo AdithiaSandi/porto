@@ -32,7 +32,7 @@ export const Skills = () => {
       <Container>
         <Row>
           <Col>
-            <div className="skill-bx">
+            <div className="skill-box">
               <h2>Skills</h2>
               <p>
                 Lorem qui reprehenderit cillum aliquip amet consectetur Lorem
