@@ -9,7 +9,6 @@ import colorSharp from "../assets/img/color-sharp.png";
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -32,7 +31,7 @@ export const Skills = () => {
       <Container>
         <Row>
           <Col>
-            <div className="skill-box">
+            <div className="skill-bx">
               <h2>Skills</h2>
               <p>
                 Lorem qui reprehenderit cillum aliquip amet consectetur Lorem
