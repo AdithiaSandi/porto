@@ -9,26 +9,25 @@ export const Projects = () => {
   const projects = [
     {
       title: "E-Commerce Clone",
-      description:
-        "Online shopping site where users can buy things. I work on the frontend side using ReactJs and ReactBootstrap.",
+      description: "Online shopping site where users can buy things.",
       imgUrl: projImg1,
     },
     {
       title: "Immersive Dashboard",
       description:
-        "A website for class instructors to manage data about their students. I work on the frontend side using NextJs and React-Bootstrap.",
+        "A website for class instructors to manage data about their students.",
       imgUrl: projImg2,
     },
     {
       title: "Rozhok App",
       description:
-        "Rozhok is a platform with a goal to help people that wish to rid their recycle-worthy junk items connected with recycling businesses that are willing to buy them. I work on the frontend side using NextJs and React-Bootstrap.",
+        "A platform that connects people that wish to rid their recycle-worthy junk items with recycling businesses.",
       imgUrl: projImg3,
     },
     {
       title: "Rozhok App",
       description:
-        "In addition, I also make API for flow “client sell junk items” as it is one of the main flow of user “Client”. I use ExpressJs to make the API and Sequelize for connection to the database. Overall, it needs 6 endpoint with mostly CRUD operation and 1 integration with 3rd-party (Google distancematrix).",
+        "API for flow “client sell junk items” as it is one of the main flow of user “Client”.",
       imgUrl: projImg3,
     },
   ];
@@ -52,30 +51,29 @@ export const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">One</Nav.Link>
+                  <Nav.Link eventKey="first">FRONTEND</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Two</Nav.Link>
+                  <Nav.Link eventKey="second">BACKEND</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Three</Nav.Link>
+                  <Nav.Link eventKey="third">UI/UX</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
+                    {projects
+                      .filter((project, index) => index < 3)
+                      .map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                  Adipisicing laboris deserunt quis fugiat eiusmod est
-                  consectetur. Nostrud reprehenderit duis occaecat duis est
-                  tempor enim laboris officia commodo nostrud deserunt nulla
-                  duis. Consequat ut quis Lorem ullamco ipsum velit. Voluptate
-                  Lorem eiusmod ad eu id in sint ipsum. Magna adipisicing aliqua
-                  non consequat incididunt aute ad mollit ea non.
+                  <Row>
+                    <ProjectCard key={4} {...projects[3]} />
+                  </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   Consectetur minim tempor cillum nostrud elit nostrud quis
@@ -91,7 +89,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} />
+      <img className="background-image-right" src={colorSharp2} alt="bgImg" />
     </section>
   );
 };
