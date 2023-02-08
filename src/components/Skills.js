@@ -46,19 +46,19 @@ export const Skills = () => {
                 infinite={true}
               >
                 <div className="item">
-                  <img src={meter1} alt="image"></img>
+                  <img src={meter1} alt="skillImage"></img>
                   <h5>Frontend Web</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="image"></img>
+                  <img src={meter2} alt="skillImage"></img>
                   <h5>Backend Web</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="image"></img>
+                  <img src={meter3} alt="skillImage"></img>
                   <h5>UI/UX</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="image"></img>
+                  <img src={meter1} alt="skillImage"></img>
                   <h5>Quality Assurance</h5>
                 </div>
               </Carousel>
@@ -66,7 +66,11 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp}></img>
+      <img
+        className="background-image-left"
+        src={colorSharp}
+        alt="background"
+      ></img>
     </section>
   );
 };
